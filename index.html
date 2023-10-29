@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array=[];
+        let choice;
+        do{
+            console.log("Menu driven program");
+            console.log("1. Push");
+            console.log("2. Pop");
+            console.log("3. Shift");
+            console.log("4. UnShift");
+            console.log("5. Sort");
+            console.log("6. Reverse");
+            console.log("7. Display");
+            console.log("8. Exit")
+            choice=parseInt(prompt("Enter the choice:"));
+
+            switch(choice){
+                case 1:
+                    let arr=prompt("Enter the value: ");
+                    array.push(arr);
+                    break;
+                case 2:
+                    array.pop();
+                    break;
+                case 3:
+                    array.shift();
+                    break;
+                case 4: 
+                    let arr1=prompt("Enter the new element:")
+                    array.unshift(arr1);
+                    break;
+                case 5:
+                    
+                    array.sort(function(a,b){return a-b});
+                    console.log("The sorted element is  "+array);
+                    break;
+                case 6:
+                    array.sort(function(a,b){return b-a});
+                    console.log("The reverse of elements are  "+array);
+                    break;
+                case 7:
+                    console.log("The array of elements is  "+array);
+                    break;
+                case 8:
+                    console.log("Exiting the program");
+                    break;
+                default:
+                    console.log("Invalid choice");
+            }
+        }
+        while(choice !== 8);
+
+ </script>
+</body>
+</html>
